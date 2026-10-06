@@ -2,8 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/", "destination": "/clinic/", "permanent": false },
-    { "source": "/clinic", "destination": "/clinic/", "permanent": false }
+    { "source": "/", "destination": "/clinic/", "permanent": false }
   ],
   "rewrites": [
     { "source": "/clinic/assets/:path*", "destination": "/assets/:path*" },
