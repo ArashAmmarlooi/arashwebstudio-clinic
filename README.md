@@ -26,9 +26,9 @@ In the **arashwebstudio** Next.js project (already on Vercel):
 
 Then visitors can open:
 
-- **https://www.arashwebstudio.com/clinic** (also `/clinic-demo`)
+- **https://www.arashwebstudio.com/clinic/** (stays on your domain; `/clinic-demo` redirects there)
 
-They are redirected to the live clinic template, like `/restaurant-demo`.
+The separate Vercel URL (`…-clinic.vercel.app/clinic/`) is only for hosting — share the **arashwebstudio.com/clinic** link with clients.
 
 ### CLI (optional)
 

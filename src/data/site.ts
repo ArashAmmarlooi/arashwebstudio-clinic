@@ -1,22 +1,24 @@
 export const BRAND = '#336699';
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 export const images = {
-  hero: '/images/lobby.jpg',
-  servicesHero: '/images/treatment-room.jpg',
-  physio: '/images/physio-session.jpg',
-  teamHero: '/images/team-group.jpg',
-  booking: '/images/consultation.jpg',
-  primary: '/images/consultation.jpg',
-  physioCard: '/images/physio-session.jpg',
-  derma: '/images/derma.jpg',
-  lobby: '/images/lobby.jpg',
-  consultation: '/images/consultation.jpg',
-  doctorF: '/images/doctor-f.jpg',
-  doctorM: '/images/doctor-m.jpg',
-  teamGroup: '/images/team-group.jpg',
-  treatment: '/images/treatment-room.jpg',
-  wellness: '/images/wellness.jpg',
-  mountains: '/images/treatment-room.jpg',
+  hero: asset('images/lobby.jpg'),
+  servicesHero: asset('images/treatment-room.jpg'),
+  physio: asset('images/physio-session.jpg'),
+  teamHero: asset('images/team-group.jpg'),
+  booking: asset('images/consultation.jpg'),
+  primary: asset('images/consultation.jpg'),
+  physioCard: asset('images/physio-session.jpg'),
+  derma: asset('images/derma.jpg'),
+  lobby: asset('images/lobby.jpg'),
+  consultation: asset('images/consultation.jpg'),
+  doctorF: asset('images/doctor-f.jpg'),
+  doctorM: asset('images/doctor-m.jpg'),
+  teamGroup: asset('images/team-group.jpg'),
+  treatment: asset('images/treatment-room.jpg'),
+  wellness: asset('images/wellness.jpg'),
+  mountains: asset('images/treatment-room.jpg'),
 };
 
 export const services = [
