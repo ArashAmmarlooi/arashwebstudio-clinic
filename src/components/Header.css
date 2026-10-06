@@ -121,6 +121,15 @@
   opacity: 1;
 }
 
+[data-theme='dark'] .theme-toggle span:first-child {
+  color: #facc15;
+  opacity: 0.95;
+}
+
+[data-theme='dark'] .theme-toggle span:last-child.on {
+  color: var(--text);
+}
+
 .header-cta {
   padding: 12px 20px;
   font-size: 0.9rem;
