@@ -49,6 +49,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: var(--header-h);
   font-family: var(--font-sans);
   font-weight: 400;
   color: var(--text);
