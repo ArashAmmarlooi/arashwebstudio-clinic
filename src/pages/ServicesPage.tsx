@@ -87,16 +87,23 @@ export function ServicesPage() {
         </div>
       </section>
 
-      <section className="appoint-banner reveal">
-        <BrandedImage src={images.mountains} alt="" className="appoint-banner__bg" strong />
-        <div className="container appoint-banner__content">
-          <p className="eyebrow">{lang === 'fr' ? 'Rendez-vous' : 'Appointments'}</p>
-          <h2 className="section-title">
-            {lang === 'fr' ? 'Trouvez les soins qu’il vous faut.' : 'Find the care you need.'}
-          </h2>
-          <Link to="/book" className="btn btn-primary">
-            {t('navBook', lang)} →
-          </Link>
+      <section className="appoint-banner section-pad">
+        <div className="container appoint-banner__grid">
+          <BrandedImage src={images.mountains} alt="" className="appoint-banner__img" strong />
+          <div className="appoint-banner__content">
+            <p className="eyebrow eyebrow-line">{lang === 'fr' ? 'Rendez-vous' : 'Appointments'}</p>
+            <h2 className="section-title">
+              {lang === 'fr' ? 'Trouvez les soins qu’il vous faut.' : 'Find the care you need.'}
+            </h2>
+            <p className="lead appoint-banner__lead">
+              {lang === 'fr'
+                ? 'Réservez en ligne en quelques minutes — choisissez le service, l’horaire et le spécialiste qui vous convient.'
+                : 'Book online in minutes — choose the service, time, and specialist that fit your schedule.'}
+            </p>
+            <Link to="/book" className="btn btn-primary">
+              {t('navBook', lang)} →
+            </Link>
+          </div>
         </div>
       </section>
     </>
