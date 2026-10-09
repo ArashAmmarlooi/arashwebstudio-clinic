@@ -119,21 +119,32 @@
 
 .theme-toggle span {
   opacity: 0.35;
-  font-size: 0.85rem;
-  transition: opacity 0.2s;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: opacity 0.2s, color 0.2s, transform 0.2s;
 }
 
 .theme-toggle span.on {
   opacity: 1;
 }
 
-[data-theme='dark'] .theme-toggle span:first-child {
+[data-theme='dark'] .theme-toggle span:first-child:not(.on) {
   color: #facc15;
-  opacity: 0.95;
+  opacity: 0.5;
 }
 
 [data-theme='dark'] .theme-toggle span:last-child.on {
-  color: var(--text);
+  color: #f4f7fb;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+[data-theme='light'] .theme-toggle span:first-child.on {
+  color: #ca8a04;
+}
+
+[data-theme='light'] .theme-toggle span:last-child:not(.on) {
+  opacity: 0.45;
 }
 
 .header-cta {

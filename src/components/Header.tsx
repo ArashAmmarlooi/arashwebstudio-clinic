@@ -78,8 +78,8 @@ export function Header() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            <span className={theme === 'light' ? 'on' : ''}>☀</span>
-            <span className={theme === 'dark' ? 'on' : ''}>☾</span>
+            <span className={theme === 'light' ? 'on' : ''} aria-hidden>☀</span>
+            <span className={theme === 'dark' ? 'on' : ''} aria-hidden>🌙</span>
           </button>
           <Link to="/book" className="btn btn-primary header-cta">
             {t('navBook', lang)} →
