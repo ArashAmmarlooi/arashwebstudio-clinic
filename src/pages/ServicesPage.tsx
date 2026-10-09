@@ -12,7 +12,7 @@ const filters = ['all', 'medical', 'rehab', 'skin'] as const;
 export function ServicesPage() {
   const { lang } = useApp();
   const [filter, setFilter] = useState<(typeof filters)[number]>('all');
-  useGsapReveal('.reveal', [lang, filter]);
+  useGsapReveal('.reveal', [lang]);
 
   const filterLabels = {
     all: lang === 'fr' ? 'Tous les services' : 'All services',
@@ -54,7 +54,7 @@ export function ServicesPage() {
       </section>
 
       <div className="filter-bar-sticky">
-        <div className="container pill-filter reveal">
+        <div className="container pill-filter">
           {filters.map((f) => (
             <button
               key={f}
@@ -69,11 +69,11 @@ export function ServicesPage() {
       </div>
 
       <section className="section-pad">
-        <div className="container services-grid">
+        <div className="container services-grid" key={filter}>
           {filtered.map((s) => {
             const copy = getServiceCopy(s.slug, lang);
             return (
-              <Link key={s.slug} to={`/services/${s.slug}`} className="svc-tile reveal card">
+              <Link key={s.slug} to={`/services/${s.slug}`} className="svc-tile svc-tile--animate card">
                 <BrandedImage src={s.image} alt="" className="svc-tile__img" />
                 <div className="svc-tile__body">
                   <span>{s.icon}</span>

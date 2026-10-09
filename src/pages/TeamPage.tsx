@@ -12,7 +12,7 @@ const deptFilters = ['all', 'medical', 'physio', 'derma'] as const;
 export function TeamPage() {
   const { lang } = useApp();
   const [dept, setDept] = useState<(typeof deptFilters)[number]>('all');
-  useGsapReveal('.reveal', [lang, dept]);
+  useGsapReveal('.reveal', [lang]);
 
   const labels = {
     all: lang === 'fr' ? "Toute l'équipe" : 'All team',
@@ -46,7 +46,7 @@ export function TeamPage() {
       </section>
 
       <div className="filter-bar-sticky">
-        <div className="container pill-filter reveal">
+        <div className="container pill-filter">
           {deptFilters.map((d) => (
             <button
               key={d}
@@ -61,9 +61,9 @@ export function TeamPage() {
       </div>
 
       <section className="section-pad team-grid-wrap">
-        <div className="container team-grid">
+        <div className="container team-grid" key={dept}>
           {filtered.map((member) => (
-            <article key={member.id} className="team-card reveal card">
+            <article key={member.id} className="team-card team-card--animate card">
               <BrandedImage src={member.image} alt="" className="team-card__photo" />
               <div className="team-card__body">
                 <h2>{member.name[lang]}</h2>
