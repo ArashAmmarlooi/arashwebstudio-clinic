@@ -224,9 +224,20 @@ h2.section-title {
 }
 
 .pill-filter {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.filter-bar-sticky {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 90;
+  padding: 14px 0 16px;
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
 
 .pill-filter button {

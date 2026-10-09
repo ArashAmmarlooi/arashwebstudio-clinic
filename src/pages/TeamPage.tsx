@@ -43,6 +43,9 @@ export function TeamPage() {
         <div className="container reveal">
           <BrandedImage src={images.teamHero} alt="" className="team-hero__img" />
         </div>
+      </section>
+
+      <div className="filter-bar-sticky">
         <div className="container pill-filter reveal">
           {deptFilters.map((d) => (
             <button
@@ -55,7 +58,7 @@ export function TeamPage() {
             </button>
           ))}
         </div>
-      </section>
+      </div>
 
       <section className="section-pad team-grid-wrap">
         <div className="container team-grid">
