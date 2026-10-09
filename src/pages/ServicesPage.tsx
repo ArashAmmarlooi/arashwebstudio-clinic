@@ -51,6 +51,9 @@ export function ServicesPage() {
             <BrandedImage src={images.servicesHero} alt="" className="services-hero__img" />
           </div>
         </div>
+      </section>
+
+      <div className="filter-bar-sticky">
         <div className="container pill-filter reveal">
           {filters.map((f) => (
             <button
@@ -63,7 +66,7 @@ export function ServicesPage() {
             </button>
           ))}
         </div>
-      </section>
+      </div>
 
       <section className="section-pad">
         <div className="container services-grid">
