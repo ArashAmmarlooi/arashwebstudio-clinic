@@ -78,26 +78,8 @@ export function Header() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            <span
-              className={`theme-toggle__sun ${theme === 'light' ? 'on' : ''}`}
-              aria-hidden
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" role="img">
-                <path
-                  d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-16h1.5v3H12V2Zm0 17h1.5v3H12v-3ZM2 11h3v1.5H2V11Zm17 0h3v1.5h-3V11ZM4.22 4.22l2.12 2.12-1.06 1.06-2.12-2.12 1.06-1.06Zm13.32 13.32 2.12 2.12-1.06 1.06-2.12-2.12 1.06-1.06ZM19.78 4.22l-1.06 1.06-2.12-2.12 1.06-1.06 2.12 2.12ZM6.34 17.66l-1.06 1.06-2.12-2.12 1.06-1.06 2.12 2.12Z"
-                />
-              </svg>
-            </span>
-            <span
-              className={`theme-toggle__moon ${theme === 'dark' ? 'on' : ''}`}
-              aria-hidden
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" role="img">
-                <path
-                  d="M21 14.5A7.5 7.5 0 0 1 9.5 3 6 6 0 1 0 21 14.5Z"
-                />
-              </svg>
-            </span>
+            <span className={theme === 'light' ? 'on' : ''}>☀</span>
+            <span className={theme === 'dark' ? 'on' : ''}>☾</span>
           </button>
           <Link to="/book" className="btn btn-primary header-cta">
             {t('navBook', lang)} →
